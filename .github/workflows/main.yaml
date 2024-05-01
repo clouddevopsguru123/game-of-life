@@ -2,7 +2,7 @@ name: gameoflife project build
 on: [push]
 jobs:
   package:
-    run-on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - name: checkout the git
         uses: actions/checkout@v4
