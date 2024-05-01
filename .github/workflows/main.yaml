@@ -1,0 +1,15 @@
+name: gameoflife project build
+on: [push]
+jobs:
+  package:
+    run-on: ubuntu-latest
+    steps:
+      - name: checkout the git
+        uses: actions/checkout@v4
+      - name: use java 1.8
+        uses: actions/setup-java@v1
+        with:
+          java-version: 1.8
+      - name: create package using mvn package
+        run: mvn package
+      
